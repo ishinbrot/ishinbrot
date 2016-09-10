@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+
+.navbar {
+  background-color: #003875;
+  height: 50px;
+  border-style: none;
+}
+
+.navbar > .navbar-text {
+    font-size: 18px;
+  color: #ffd65a;
+    margin-left:10px;
+}
+
+.newtask {
+  
+}
+
+.title {
+  
+}
+
+.container {
+  
+  
+}
+
+input[type="checkbox"]:checked + label{
+    font-style: italic;
+    color: green;
+    text-decoration: line-through;
+    
+}

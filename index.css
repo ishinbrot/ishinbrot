@@ -1,0 +1,81 @@
+<style type="text/css">
+
+#container {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     margin: 0;
+     background: transparent;
+}
+#nav {
+ list-style-type: none;
+    margin: 0;
+    padding: 0;
+     margin: 0;
+     background: transparent;
+}
+#nav a:hover {
+  background-color: #005f5f;
+}
+#nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+  float:left;
+}
+#navigation li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+#navigation ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+#table th {
+font-weight: bold;
+
+}
+#experience {
+clear: both
+
+}
+#contact {
+clear: left
+}
+.sidebar {
+   width: 45px;
+   height: 90px;
+   position: fixed;
+   left: 0px;
+   top: 300px;
+}
+.sidebar a:hover {
+	background-color: #005f5f;
+}
+.sidebar a:active{
+    outline:none;
+    border-color:#ffa853;
+    background-color:#FF6600;
+    box-shadow:0 0 10px #ffa853;
+}
+    .main {
+        position: absolute;
+        left:100px; top:92px; right:0; bottom:0;
+    }
+    
+     .header {
+        position:absolute;
+        left:0; right:0;
+        height: 92px;
+        text-align: center;
+ }
+
+</style>

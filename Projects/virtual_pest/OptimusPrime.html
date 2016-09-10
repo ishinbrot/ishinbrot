@@ -1,0 +1,331 @@
+<html>
+    <head>
+    <title>Optimus Prime-The Virtual Pest</title>
+    <h1>Optimus Prime The Crazy Penguin</h1>
+    
+    <script LANGUAGE="Javascript"> <!--hide from uneducated browsers
+        
+        var thePest
+        var happy = new Image()
+        
+        var enraged= new Image()
+        
+        var hungry = new Image()
+        
+        var dead = new Image()
+        
+        var playful = new Image()
+        happy.src="penguin_happy.png"       // assigns happy.src to the 
+                                            // penguin_happy.png
+        
+        enraged.src="penguin_enraged.png"   // assigns enraged.src to the 
+                                            // penguin_enraged.png
+        
+        hungry.src="penguin_hungry.png"     // assigns hungry.src to the 
+                                            // penguin_hungry.png
+        
+        dead.src="penguin_dead.png"         // assigns dead.src to the
+                                            // penguin_dead.png
+        
+        playful.src="penguin_playful.png"   // assigns playful.src to the 
+                                            // penguin_playful.png
+        
+        function VirtualPest(state,petaction,petsound,counter,petimage)
+        {
+            // ---------------------------------------------------------------------------
+            // This 'function' is actually a constructor for a Virtual Pest.  The Pest 
+            // should have properties 'state' and 'counter', and also properties for 
+            // each of the places where values are shown in the display form. 
+            // ---------------------------------------------------------------------------
+       
+        
+       
+        
+        this.state = state
+    	this.petaction = petaction
+    	this.petsound = petsound
+    	this.counter = counter
+        this.petimage = petimage
+        }
+        
+
+        function Init()
+        {
+            // ---------------------------------------------------------------------------
+            // This function is called when the page is loaded initially.  
+            // It does the following:
+            //   Calls the pest constructor (VirtualPest) with initial values,
+            //     including the value of the form's "state" element, 
+            //   Calls ShowState in order to initialize the display
+            //   Sets the simulation in motion by preparing a call
+            //     to Simulate after 1000 msec (= 1 second).
+            // ---------------------------------------------------------------------------	
+        // Creates a new virtual pest (thePest) by providing
+        //  - inital state ("happy")
+        //  - intial value for the petaction display box ("" - the empty string)
+        //  - inital value for the petsound display box ("" - the empty string )
+        //  - initial value for the counter - the number of times Simulate is called (0)
+        
+        thePest = new VirtualPest("happy","","",0,"")
+        
+        ShowState(thePest)
+        setTimeout("Simulate(thePest)", 1000)
+        }
+        
+        
+        function ShowState(pest)
+        {
+        // this function updates the form in order to
+        // make visible the effects of the pest's state
+        // this function does not make changes to the pest's state
+            
+        // the pest's state is retrieved from the "state"
+        // element of the form
+            
+        // The value of the state is examined and form
+        // elements are updated as appropriate.
+        // the picture is also updated as appropriate
+    
+            var state=pest.state
+            
+        if( state == "happy" ) 
+        {
+            pest.petaction = "jumps up and down"
+            pest.petsound = "Yay"
+            pest.petimage =happy.src
+            
+            
+        }
+        else if( state == "enraged" ) 
+        {
+            pest.petaction = "BITE!!!"
+            pest.petsound = "Roar..."
+            pest.petimage= enraged.src
+        }
+        else if( state == "playful" ) 
+        {
+            pest.petsound = "Yay"
+            pest.petaction = ""
+            pest.petimage=playful.src
+            
+        }
+        else if( state == "hungry" ) 
+        {  
+            pest.petsound = "Roar..."
+            pest.petaction = "Arms across belly and unhappy smile"
+            pest.petimage=hungry.src
+        }
+        else if (state == "dead" )
+        {
+            pest.petaction = "lies dead on beach"
+            pest.petsound = ""
+            pest.petimage=dead.src
+        }
+            
+        else
+        {
+            pest.petaction = "Error - unknown state"
+            pest.petsound = "Oh No!"
+        }
+            document.getElementById("state").value = pest.state
+            document.getElementById("petaction").value = pest.petaction
+            document.getElementById("petsound").value = pest.petsound
+            document.getElementById("counter").value = pest.counter
+            document.getElementById("petimage").src = pest.petimage
+            
+            
+        
+        }
+            function Pat(pest) 
+            {
+                // ---------------------------------------------------------------------------
+                // This function is called when the "Pat Penguin" 
+                // button is clicked.  This button only has an
+                // effect if the pest is in the "angry" or "lonely"
+                // state.  Otherwise, nothing is changed.
+                // ---------------------------------------------------------------------------
+                
+                // ---------------------------------------------------------------------------
+                // The pest's state is retrieved from the "state"
+                // element of the form
+                // ---------------------------------------------------------------------------
+                var state = pest.state
+                
+                // ---------------------------------------------------------------------------
+                // The pest's state is changed as appropriate:
+                // ---------------------------------------------------------------------------
+                if( state == "happy")
+                {
+                    pest.state = "playful"
+                    
+                }
+                else if (state=="playful")
+                {
+                    pest.state = "hungry"
+                }
+                // ---------------------------------------------------------------------------
+                // The display is updated to reflect the pest's state
+                // ---------------------------------------------------------------------------
+                ShowState(pest)
+            }
+                function Feed(pest) 
+                {
+                    // ---------------------------------------------------------------------------
+                    // This function is called when the "Feed Penguin" 
+                    // button is clicked.  This button only has an
+                    // effect if the pest is in the "angry" or "lonely"
+                    // state.  Otherwise, nothing is changed.
+                    // ---------------------------------------------------------------------------
+                    
+                    // ---------------------------------------------------------------------------
+                    // The pest's state is retrieved from the "state"
+                    // element of the form
+                    // ---------------------------------------------------------------------------
+                    var state = pest.state
+                    
+                    // ---------------------------------------------------------------------------
+                    // The pest's state is changed as appropriate:
+                    // ---------------------------------------------------------------------------
+                    if( state == "hungry" )
+                    {
+                    pest.state = "happy"
+                    }
+                    else if (state == "happy")
+                    {
+                    pest.state = "playful"
+      
+                    }
+                    else if (state == "playful")
+                    {
+                    pest.state = "enraged"
+                
+                    }
+                    else if (state == "enraged"  )
+                    {
+                        pest.state = "dead"
+
+                    }
+                    else if (state == "enraged")
+                    {
+                        pest.state = "happy"
+                    
+                    }
+                    else if (state == "hungry" )
+                    {
+                        pest.state = "playful"
+                    }
+                    
+                    // ---------------------------------------------------------------------------
+                    // The display is updated to reflect the pest's state
+                    // ---------------------------------------------------------------------------
+                    ShowState(pest)
+                }
+                
+                function Simulate(pest) 
+                {
+                    // ---------------------------------------------------------------------------
+                    // This function is the heart of a simulation
+                    // of state transitions reflected in a finite-state
+                    // machine.
+                    // ---------------------------------------------------------------------------
+                    
+                    pest.counter++  // updates the Simulate counter.
+                    
+                    // ---------------------------------------------------------------------------
+                    // The pest's state is retrieved from the "state"
+                    // element of the form
+                    // ---------------------------------------------------------------------------
+                    var state = pest.state
+                    
+                    // ---------------------------------------------------------------------------
+                    // A random number in the interval (0,1) is generated.
+                    // ---------------------------------------------------------------------------
+                    var n = Math.random()
+                    
+                    // The state changes according to the following rules:
+                    //
+                    // If the current state is "happy", the pest has a 40%
+                    // chance of becoming "playful" and an 60% chance of 
+                    // remaining "happy".
+                    // If the current state is "playful", the pest has a 20%
+                    // chance of becoming "enraged" and a 90% chance of remaining
+                    // "playful".
+                    // If the current state is "enraged", the pest has a 60% chance
+                    // of becoming "happy" and a 40% chance of remaining enraged
+                    // If the current state is "enraged" the pest has a 40% chance of
+                    // becoming "dead" and a 40% chance of remaining enraged
+                    // If the current state is "hungry" the pest has a 60% chance of
+                    // becoming "happy" and a 70% chance of remaining "hungry"
+                    // If the current state is "hungry" the pest has a 20% chance of becoming
+                    // "dead" and an 80% chance of remaining "hungry"
+                    // If the current state is "playful" the pest has a 80% chance of becoming
+                    // "hungry" and a 20% chance of remaining "playful"
+                    // ---------------------------------------------------------------------------
+                    
+                    if( state == "happy" && n < 0.4 ) 
+                    pest.state = "playful"
+                    else if( state == "playful" && 0.0<n && n< 0.2 )
+                    pest.state = "enraged"
+                    if (state == "enraged"&& 0.0 <n && n< 0.6)
+                    pest.state = "happy"
+                    else if (state == "enraged"&& 0.6<n && n<1)
+                    pest.state = "dead"
+                    if( state == "hungry" && n<0.3)
+                    pest.state = "happy"
+                    if( state == "hungry" && n<0.2)
+                    pest.state = "dead"
+                    if (state =="playful" &&  n<0.2 && n<1)
+                    pest.state = "hungry"
+                   
+                    // ---------------------------------------------------------------------------
+                    // The display is updated to reflect the pest's state
+                    // ---------------------------------------------------------------------------
+                    ShowState(pest)
+                    
+                    // ---------------------------------------------------------------------------
+                    // The Simulate function is set to run again after a delay
+                    // ---------------------------------------------------------------------------
+                    setTimeout("Simulate(thePest)",1000)
+                }
+ // end hiding from uneducated browsers --> </script>
+    </head>
+    <body BGCOLOR="#FFFFFF" onLoad="Init()">
+        <table WIDTH="100%" BORDER="1" CELLPADDING="4" CELLSPACING="0">
+            <tr>
+                <td BGCOLOR="#FF5800">
+                    <div ALIGN="CENTER"><img ID="petimage" Name="petimage" SRC="petimage.src" Alt=new Image width=133 height=125 align=middle Alt="petimage"/></div>
+                </td>
+            </tr>
+        </table>
+        
+  
+    <form ACTION="" method=POST NAME="PEST" ID="PEST">
+        <p ALIGN="center"><b><font FACE="Georgia, Times New Roman, Times, serif">Pet Sound:</font></b>
+        <input type=text name=petsound id=petsound VALUE="" size=35 />
+        </p>
+        <p ALIGN="center"><b><font FACE="Georgia, Times New Roman, Times, serif">Pet Action:</font></b>
+        <input type=text name=petaction id=petaction VALUE="" size=35 />
+        </p>
+        <p ALIGN="center">
+        <input type=button name=OwnerActionF VALUE="Feed the Penguin" onClick="Feed(thePest)"/>
+        <input type=button name=OwnerAction  id=OwnerAction VALUE="Pat the Penguin" onClick="Pat(thePest)"/>
+        <!--
+        This item normally will not be displayed on the page, but for
+        purposes of program development and debugging, it is visible.  To
+        hide it, change the TYPE attribute to "hidden".
+        -->
+        <input type=hidden name=state id=state VALUE="" size=30 />
+        <!--
+         This item normally will not be displayed on the page, but for
+         purposes of program development and debugging, it is included.  To
+         hide it, change the TYPE attribute to "hidden".
+         
+        Step counter: -->
+        <input type=hidden name=counter id=counter VALUE="" size=30 />
+        </p>
+        <p>
+        </p>
+    </form>
+         </body>
+
+</htmlID="penguin">
