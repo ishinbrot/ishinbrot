@@ -1,0 +1,44 @@
+
+<div id="header">
+    <script src="jquery-2.2.2.min.js"></script>
+     <script src="lib/pageFunctions.js"></script>
+    </div>
+
+<div id="navigation">
+</div>
+
+
+<main class="mdl-layout__content">
+<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+
+	<div class="mdl-grid portfolio-copy">
+		<div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+			Welcome to my site. This site is currently a work in progress. If you have any feedback feel free to let me know so I can improve the site.
+			<br>
+			Feel free to click any of the links above or from the navigation drawer to find more information.
+		</div>
+	</div>
+</div>
+</main>
+
+<div id="footer">
+    </div>
+
+
+            <script>
+                function loadNavigation() {
+     $("#header").load('lib/header.html', function() {
+                        $("#navigation").load('lib/navigation.html', function() {
+                       highlightNavOption()
+                        updateHeader();
+                        })
+                        $("#footer").load('lib/footer.html', function() {
+                       updateFooter();
+                            });
+                    });
+}
+            </script>
+
+             <body onload="loadNavigation();">
+
+           

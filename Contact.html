@@ -1,0 +1,55 @@
+<div id="header">
+    <script src="jquery-2.2.2.min.js"></script>
+     <script src="lib/pageFunctions.js"></script>
+    </div>
+
+<div id="navigation">
+</div>
+    <main class="mdl-layout__content">
+Feel free to contact me. My contact information is provided below.
+        <br>
+        <a href="mailto:ianshinbro@gmail.com"><i class="mdi mdi-email iconSize" id="emailMe"></i>  <!-- email -->
+        <div class="mdl-tooltip" for="emailMe">
+            EMAIL
+        </div>
+            </a>
+        <a href="https://www.linkedin.com/in/ishinbrot"><i class="mdi mdi-linkedin-box iconSize" id="Linkedin"></i>  <!-- linkedin -->
+        <div class="mdl-tooltip" for="Linkedin">
+            LINKEDIN
+        </div>
+        </a>
+
+       <a href="https://plus.google.com/+IanShinbrot/posts"> <i class="mdi mdi-google-plus-box iconSize" id="googlePlus"></i>  <!-- google plus -->
+           <div class="mdl-tooltip" for="googlePlus">
+               GOOGLE+
+           </div>
+           </a>
+        <a href="https://www.facebook.com/ianshinbro"><i class="mdi mdi-facebook-box iconSize" id="facebook"></i>  <!-- facebook -->
+            <div class="mdl-tooltip" for="facebook">
+                FACEBOOK
+            </div>
+            </a>
+        </main>
+ <footer class="mdl-mini-footer">
+
+<div id="footer">
+    </div>
+
+
+            <script>
+                function loadNavigation() {
+     $("#header").load('lib/header.html', function() {
+                        $("#navigation").load('lib/navigation.html', function() {
+                        highlightNavOption()
+                        updateHeader();
+                        })
+                        $("#footer").load('lib/footer.html', function() {
+                       updateFooter();
+                            });
+                    });
+}
+            </script>
+
+             <body onload="loadNavigation();">
+
+           
