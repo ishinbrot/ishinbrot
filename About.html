@@ -1,11 +1,52 @@
-
-<div id="header">
-    <script src="jquery-2.2.2.min.js"></script>
+<head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" type="text/css" href=".//css/header.css">
+<link rel="stylesheet" type="text/css" href="mdl/material.css">
+<link href="materialDesignIcons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/cs
+s" />
+<script src="mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,li
+ght,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" type="text/css" href=".//css/body.css">
+   <link rel="stylesheet" href="material-modal-master/dist/css/material-modal.min.css">
+   <script src="material-modal-master/src/js/material-modal.js"></script>
+   <script src="dialog-polyfill-master/dialog-polyfill.js"></script>
+   <link rel="stylesheet" href="dialog-polyfill-master/dialog-polyfill.css">
+       <script src="jquery-2.2.2.min.js"></script>
      <script src="lib/pageFunctions.js"></script>
-    </div>
+</head>
 
-    <div id="navigation">
+<div id="navigation">
+   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout__title">
+                    <span class="mdl-layout__title" id="headerText"> - Ian Shinbrot</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font mdl-layout--fixed-
+header">
+                  <a class="mdl-navigation__link" href="Home.html">Home</a>
+                    <a class="mdl-navigation__link" href="About.html">About</a>
+                    <a class="mdl-navigation__link"  href="Projects.html">Projects</a>
+                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                     <a class="mdl-navigation__link" href="Home.html">Home</a>
+                    <a class="mdl-navigation__link" href="About.html">About</a>
+                    <a class="mdl-navigation__link" href="Projects.html">Projects</a>
+                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
+            </nav>
         </div>
+
+
     <main class="mdl-layout__content">
         <div class="mdl-grid portfolio-max-width">
 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
@@ -98,7 +139,7 @@
                 </div>
             </dialog>
             <script>
-                var dialog3 = document.querySelectorAll('dialog')[2];
+                var dialog3 = document.querySelectorAll('dialog')[1];
                 var showModalButton = document.querySelector('.workExperience');
                 if (! dialog3.showModal) {
                     dialogPolyfill.registerDialog(dialog3);
@@ -149,20 +190,6 @@
 <div id="footer">
     </div>
 
-            <script>
-                function loadNavigation() {
-                    $("#header").load('lib/header.html', function() {
-                        $("#navigation").load('lib/navigation.html', function() {
-                         updateHeader();
-                        highlightNavOption()
-                        })
-                        $("#footer").load('lib/footer.html', function() {
-                       updateFooter();
-                            });
-                    });
-}
-            </script>
-
-             <body onload="loadNavigation();">
+             <body onload="loadHeaderAndFooter();">
 
            
