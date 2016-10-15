@@ -46,27 +46,44 @@ header">
             </nav>
         </div>
 
-    <main class="mdl-layout__content">
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width portfolio-contact">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Contact</h2>
+                    </div>
 
-        
-Feel free to contact me. My contact information is provided below.
-<br>
-        <a href="mailto:ianshinbro@gmail.com"><i class="material-icons iconSize" id="email">email</i>  <!-- email -->
-        <div class="mdl-tooltip" for="email">
-            EMAIL
-        </div>
-            </a>
-        <a href="https://www.linkedin.com/in/ishinbrot"><i class="material-icons iconSize" id="Linkedin">work</i>  <!-- linkedin -->
-        <div class="mdl-tooltip" for="Linkedin">
-            LINKEDIN
-        </div>
-        </a>
-       <a href="https://plus.google.com/+IanShinbrot/posts"> <i class="material-icons iconSize" id="googlePlus">plus_one</i>  <!-- google plus -->
-           <div class="mdl-tooltip" for="googlePlus">
-               GOOGLE+
-           </div>
-           </a>
-        </main>
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                        Please fill out the information below if you would like to contact me.
+                         </p>
+                        <form action="#" class="">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email">
+                                <label class="mdl-textfield__label" for="Email">Email...</label>
+                            </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Subject">
+                                <label class="mdl-textfield__label" for="Name">Subject...</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                                <label class="mdl-textfield__label" for="note">Enter note</label>
+                            </div>
+                            <p>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ContactSubmission" type="submit" onClick="contact($('#Email').val(), $('#Subject').val(), $('#note').val())">
+                                    Submit
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-info" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
 
 <div id="footer">
     </div>
