@@ -3,9 +3,9 @@
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="Ian Shinbrot" content="A website containing a brief overview of my experience and hobbies.">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href=".//css/header.css">
-<link rel="stylesheet" type="text/css" href="mdl/material.css">
+<link rel="stylesheet" type="text/css" href=".//css/body.css"
 <link href="materialDesignIcons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/cs
 s" />
 <script src="mdl/material.min.js"></script>
@@ -13,175 +13,213 @@ s" />
 ght,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" type="text/css" href=".//css/body.css">
-   <link rel="stylesheet" href="material-modal-master/dist/css/material-modal.min.css">
-   <script src="material-modal-master/src/js/material-modal.js"></script>
-   <script src="dialog-polyfill-master/dialog-polyfill.js"></script>
-   <link rel="stylesheet" href="dialog-polyfill-master/dialog-polyfill.css">
        <script src="jquery-2.2.2.min.js"></script>
      <script src="lib/pageFunctions.js"></script>
+         <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+             <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
 </head>
 
-<div id="navigation">
-   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout__title">
-                    <span class="mdl-layout__title" id="headerText"> - Ian Shinbrot</span>
-                </span>
-            </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font mdl-layout--fixed-
-header">
-                  <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link"  href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-                </nav>
-            </div>
+  <style>
+
+    </style>
+  </head>
+  <body class="mdc-typography mdc-toolbar-demo">
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+     <button class="site-menu material-icons">menu</button>
+          <span class="mdc-toolbar__title catalog-title">About - Ian Shinbrot</span>
+        </section>
+    <aside class="mdc-temporary-drawer">
+      <nav class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header">
+          <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text-primary-on-primary">
+            Use the navigation bar below
+          </div>
         </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                     <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link" href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-            </nav>
-        </div>
+        <nav class="mdc-temporary-drawer__content mdc-list-group">
+          <div id="icon-with-text-demo" class="mdc-list">
+            <a class="mdc-list-item" href="Home.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Home</i>Home
+            </a>
+            <a class="mdc-list-item mdc-temporary-drawer--selected" href="About.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">About</i>About
+            </a>
+            <a class="mdc-list-item" href="Projects.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Projects</i>Projects
+            </a>
+            <a class="mdc-list-item" href="Contact.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Contacts</i>Contacts
+            </a>
+          </div>
 
+          <hr class="mdc-list-divider">
+        </nav>
+      </nav>
+    </aside>
 
-    <main class="mdl-layout__content">
-        <div class="mdl-grid portfolio-max-width">
-<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-    <div class="mdl-grid portfolio-copy">
-        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-            Hello, My name is Ian Shinbrot. I am currently an Associate Engineer Staff at Lockheed Martin.
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+          
+        </section>
+        
+      </div>
+    </header>
+    <main>
+      <div class="mdc-toolbar-fixed-adjust">
+              <p class="mdc-typography--body1 site-main">
+
+        Hello, My name is Ian Shinbrot. I am currently an Associate Engineer Staff at Lockheed Martin.
+
             <br>
             <br>
             I recently graduated from Drexel with a bachelors degree in Computer Science. 
             At Drexel, I have completed three different co-ops, 6-month internships. My first co-op was at Independence Blue Cross, while my second and third co-op were both at NextDocs, which was acquired by Aurea during my third co-op.
-            Please click one of the below links to learn more information.
-        </div>
-    </div>
-</div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Drexel Activities</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    I participated in a lot of organizations while I was at Drexel. Please click below for more information.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect DrexelExperience">
-                        More Info
-                    </a>
-            </div>
-        </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">Drexel Co-op Experience</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
+            Please click one of the below links to learn more information.</p>
+
+        </p>
+      </div>
+
+
+
+    <section class="demo-typography--section mdc-typography" id="site-wrapper">
+
+
+            <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Work Experience</h1>
+            <h2 class="mdc-card__subtitle">Working Subtitle</h2>
+          </section>
+          <section class="mdc-card__supporting-text">
                     I have worked at many companies throughout the years. Click to see more information.
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect workExperience">
-                        More Info
-                    </a>
-                </div>
-            </div>
+          </section>
+          <section class="mdc-card__actions">
+            <button id="workInformation" class="mdc-button mdc-button--compact mdc-card__action">More information</button>
+          </section>
+        </div>
+      </div>
 
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Projects</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        I have created various projects throughout the years. More info can be found by clicking the link.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="Projects.html">Projects</a>
-                        </a>
-               </div>
-            </div>
-                    
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Resume</h2>
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        Please check out my resume (Updated in February 2017)
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="ianShinbrot_resume.pdf">Resume</a>
-                    </div>
-                </div>
-
-</div>
-            
-</main>
-            <dialog class="mdl-dialog aboutDialog">
-                <div class="mdl-dialog__content">
-                        <button type="button" class="mdl-button close closeDialog">X</button>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Drexel Experience</h2>
-                    </div>
-                        I was a Peer Mentor/Student Ambassador for the College of Computing Informatics from Fall 2012 until I graduated in June 2016. I was also a Teaching Assistant for the Department of Computer Science from September 2012 until June 2016. In May 2016 I recieved the outstanding undergraduate Teaching Assistant Award.
-                        <br>
-                        <br>
-                        I was a Teaching Assistant for CS 161, Introduction to Computing, CS 164, Introduction to Computer Science, CS 171 Programming I, CS 172 Programming II, CS 175 Programming I & II, and CS 275, Web and Mobile Application Development. As a teaching assistant I assisted students learn about the different aspects of computer science and programming. The classes that I helped with covered the following languages: C++, JAVA Android, Javascript, and HTML.
-                        <br>
-                        <br>
-                        As a Peer Mentor I worked with the College of Computing Informatics to help prospective student get accustomed to college life at Drexel, as well as assisted in open houses and visit days.
-
-                </div>
-
-            </dialog>
-            <script>
-                var dialog = document.querySelectorAll('dialog')[0];
-                var showModalButton = document.querySelector('.DrexelExperience');
-                if (! dialog.showModal) {
-                    dialogPolyfill.registerDialog(dialog);
-                }
-                showModalButton.addEventListener('click', function() {
-                    dialog.showModal();
-                });
-                dialog.querySelector('.close').addEventListener('click', function() {
-                    dialog.close();
-                });
-            </script>
-            <dialog class="mdl-dialog aboutDialog">
-                <div class="mdl-dialog__content">
-                    <button type="button" class="mdl-button close closeDialog">X</button>
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Work Experience</h2>
-                    </div>
+            <aside id="mdc-dialog-workExperience"
+              class="mdc-dialog"
+        	  role="alertdialog"
+        	  aria-hidden="true"
+        	  aria-labelledby="mdc-dialog-workExperience-label"
+        	  aria-describedby="mdc-dialog-workExperience-description">
+    	    <div class="mdc-dialog__surface">
+    	      <header class="mdc-dialog__header">
+    	        <h2 id="mdc-dialog-workExperience-label" class="mdc-dialog__header__title">
+    	          Work Experience
+    	        </h2>
+    	      </header>
+    	      <section id="mdc-dialog-workExperience-description" class="mdc-dialog__body">
 			 <h4>NextDocs</h4>
                         I worked  at NextDocs for two of my co-ops, between March-September 2014-2015. NextDocs was acquired by Aurea during my third co-op in June 2015.
                         At NextDocs I worked on the NextDocs Suite of Applications consisting of the Regulatory, SOP, and eTMF platforms. I was able to quickly learn C#, SQL, and improve my Javascript skills there. as well as my scripting skills.
 
                         <h4>Independence Blue Cross</h4>
                         I worked at Independence Blue Cross for 6 months where I performed manual testing of their mobile IBX application, used Adobe Photoshop to design Drug Labels to be used in the application, as well as initiate the move toward automated testing using a program called SeeTest.
-                        <br>
-                </div>
-            </dialog>
-            <script>
-                var dialog3 = document.querySelectorAll('dialog')[1];
-                var showModalButton = document.querySelector('.workExperience');
-                if (! dialog3.showModal) {
-                    dialogPolyfill.registerDialog(dialog3);
-                }
-                showModalButton.addEventListener('click', function() {
-                    dialog3.showModal();
-                });
-                dialog3.querySelector('.close').addEventListener('click', function() {
-                    dialog3.close();
-                });
-            </script>
-            <br>
+                        <br>    	      </section>
+    	      <footer class="mdc-dialog__footer">
+    	        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Close</button>
+    	        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Contact</button>
+    	      </footer>
+    	    </div>
+    	    <div class="mdc-dialog__backdrop"></div>
+      	</aside>
 
+      <div>
+        <div class="mdc-card site-card">
+          <div class="mdc-card__horizontal-block">
+            <section class="mdc-card__primary">
+              <h1 class="mdc-card__title mdc-card__title--large">Projects</h1>
+              <h2 class="mdc-card__subtitle">Click to view my projects</h2>
+            </section>
+          </div>
+          <section class="mdc-card__actions">
+            <a href="Projects.html" class="mdc-button mdc-button--compact mdc-card__action">Projects</a>
+          </section>
+        </div>
+      </div>
+
+        
+      <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Resume</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
+                    Please check out my updated resume
+          </section>
+          <section class="mdc-card__actions">
+            <a href="ianShinbrot_resume.pdf" class="mdc-button mdc-button--compact mdc-card__action">Resume</a>
+          </section>
+        </div>
+      </div>
+
+      
+      </section>
+    </main>
+    <script src="../assets/material-components-web.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      (function() {
+        var pollId = 0;
+        pollId = setInterval(function() {
+          var pos = getComputedStyle(document.querySelector('.mdc-toolbar')).position;
+          if (pos === 'fixed' || pos === 'relative') {
+            clearInterval(pollId);
+          }
+        }, 250);
+
+   'use strict';
+
+        var nodes = document.querySelectorAll('.mdc-icon-toggle');
+        for (var i = 0, node; node = nodes[i]; i++) {
+          mdc.iconToggle.MDCIconToggle.attachTo(node);
+        }
+
+        var addToFavorites = document.getElementById('add-to-favorites');
+        var favoritedStatus = document.getElementById('favorited-status');
+        addToFavorites.addEventListener('MDCIconToggle:change', function(evt) {
+          var newStatus = evt.detail.isOn ? 'yes' : 'no';
+          favoritedStatus.textContent = newStatus;
+        });
+      
+      })();
+    </script>
+
+        <script>
+      var drawerEl = document.querySelector('.mdc-temporary-drawer');
+      var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+      var drawer = new MDCTemporaryDrawer(drawerEl);
+      document.querySelector('.site-menu').addEventListener('click', function() {
+        drawer.open = true;
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+        console.log('Received MDCTemporaryDrawer:open');
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+        console.log('Received MDCTemporaryDrawer:close');
+      });
+
+       var dialog = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-workExperience'));
+        dialog.listen('MDCDialog:accept', function() {
+          console.log('TODO:implement contact information');
+        });
+        dialog.listen('MDCDialog:cancel', function() {
+          console.log('closed work information');
+        });
+        document.querySelector('#workInformation').addEventListener('click', function (evt) {
+          dialog.lastFocusedTarget = evt.target;
+          dialog.show();
+        });
+    </script>
+  </body>
 
 <div id="footer">
     </div>
 
              <body onload="loadHeaderAndFooter();">
+
+           

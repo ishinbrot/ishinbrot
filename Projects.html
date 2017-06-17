@@ -1,180 +1,246 @@
 <head>
+<html xmlns="http://www.w3.org/1999/xhtml">
  <meta charset="utf-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="Ian Shinbrot" content="A website containing a brief overview of my experience and hobbies.">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href=".//css/header.css">
-<link rel="stylesheet" type="text/css" href="mdl/material.css">
+<link rel="stylesheet" type="text/css" href=".//css/body.css"
 <link href="materialDesignIcons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/cs
 s" />
-<script src="mdl/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,li
 ght,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" type="text/css" href=".//css/body.css">
-   <link rel="stylesheet" href="material-modal-master/dist/css/material-modal.min.css">
-   <script src="material-modal-master/src/js/material-modal.js"></script>
-   <script src="dialog-polyfill-master/dialog-polyfill.js"></script>
-   <link rel="stylesheet" href="dialog-polyfill-master/dialog-polyfill.css">
        <script src="jquery-2.2.2.min.js"></script>
      <script src="lib/pageFunctions.js"></script>
+         <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+             <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
 </head>
 
-<div id="navigation">
-   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout__title">
-                    <span class="mdl-layout__title" id="headerText"> - Ian Shinbrot</span>
-                </span>
-            </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font mdl-layout--fixed-
-header">
-                  <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link"  href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-                </nav>
-            </div>
+    <style>
+
+    /* Place drawer and content side by side. */
+    .contact-body {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+
+    .contact-main {
+      padding-left: 16px;
+    }
+        
+        .demo-body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    </style>
+  </head>
+  <body class="contact-body mdc-typography">
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+     <button class="site-menu material-icons">menu</button>
+          <span class="mdc-toolbar__title catalog-title">Projects - Ian Shinbrot</span>
+        </section>
+    <aside class="mdc-temporary-drawer">
+      <nav class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header">
+          <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text-primary-on-primary">
+            Use the navigation bar below
+          </div>
         </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                     <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link" href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-            </nav>
+        <nav class="mdc-temporary-drawer__content mdc-list-group">
+          <div id="icon-with-text-demo" class="mdc-list">
+            <a class="mdc-list-item" href="Home.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Home</i>Home
+            </a>
+            <a class="mdc-list-item" href="About.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">About</i>About
+            </a>
+            <a class="mdc-list-item mdc-temporary-drawer--selected" href="Projects.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Projects</i>Projects
+            </a>
+            <a class="mdc-list-item" href="Contact.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Contact</i>Contact
+            </a>
+          </div>
+
+          <hr class="mdc-list-divider">
+
+
+        </nav>
+      </nav>
+    </aside>
+
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+        </section>
+      </div>
+    </header>
+
+    <main class="site-main">
+                <div style=margin:70></div>
+            <h1 class="mdc-typography--display1">Web Projects</h1>
+                      <p class="mdc-typography--body1 site-main">
+
+                    Please check out some of my projects below
+          </p>
         </div>
+      </div>
+    <section class="demo-typography--section mdc-typography" id="site-wrapper">
 
-<main class="mdl-layout__content">
-                        <div class="mdl-card__title">
-<h2 class="mdl-card__title-text">Web Projects</h2>
-                                </div>
-        <div class="mdl-grid">
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">Virtual Pest</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
+      <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Virtual Pest</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
                                                 The Virtual Pest is very similar to a Tamagotchi. The 'pest' has 5 different states that it can show based on the actions the user chooses.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="Projects/virtual_pest/OptimusPrime.html">Virtual Pest</a>
-                                        </div>
-                                </div>
-                        </div>
+          </section>
+          <section class="mdc-card__actions">
+            <a href="Projects/virtual_pest/OptimusPrime.html" class="mdc-button mdc-button--compact mdc-card__action">Virtual Pest</a>
+          </section>
+        </div>
+      </div>
 
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">CollegeSearch</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
+      <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">CollegeSearch</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
                                                 This is my senior project. I worked on the front-end of the application using both HTML and Angular Material 1.0.
                                                 It is a college search application that allows you to search for colleges. It currently doesn't run on github pages.
                                                 This links to the github location of the repository.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/DrexelSeniorDesign2016Team8/FrontEnd">CollegeSearch</a>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Android Applications</h2>
+                                                          </section>
+          <section class="mdc-card__actions">
+            <a href="https://github.com/DrexelSeniorDesign2016Team8/FrontEnd" class="mdc-button mdc-button--compact mdc-card__action">CollegeSearch</a>
+          </section>
         </div>
-<div class="mdl-card__supporting-text">
-These Android Applications must be downloaded and installed on an Android phone to run. Make sure you check 'Unknown Sources' in the Security Settings so the applications can be installed.
-</div>
-<br>
+      </div>
+    </section>
+          <hr class="mdc-list-divider">
 
-        <div class="mdl-grid">
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">Septa Train Finder</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
+      <h1 class="mdc-typography--display1">Android Applications</h1>
+              <p class="mdc-typography--body1 site-main">
+
+      These Android Applications must be downloaded and installed on an Android phone to run. Make sure you check 'Unknown Sources' in the Security Settings so the applications can be installed.
+        </p>
+
+
+    <section class="demo-typography--section mdc-typography" id="site-wrapper">
+
+                            <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Septa Train Finder</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
                                                 This application allows a user to find upcoming trains between two Septa stations.
                                                 Septa is the Philadelphia Subway System.
-                                                The user will select a starting station and ending station. Hitting TranInfo will display the upcoming trains between the two stations. Long pressing a train will also inform you of the estimated arrival time, and actual time.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="Projects/CS275_A2.apk">CS275_A2</a>
-                                        </div>
-                                </div>
-                        </div>
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">Parking Lot Database</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                                This program allows a user to add a custom parking lot to a database stored on cloudmine. The application can also display the list of lots added, edit the already existing lots, or find lots within 100 miles of the current location.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="Projects/CS275_lab3.apk">CS275_lab3</a>
-                                        </div>
-                                </div>
-                        </div>
+                                                The user will select a starting station and ending station. 
+                                                Hitting TrainInfo will display the upcoming trains between the two stations. 
+                                                Long pressing a train will also inform you of the estimated arrival time, and actual time.          </section>
+          <section class="mdc-card__actions">
+            <a href="Projects/CS275_A2.apk" class="mdc-button mdc-button--compact mdc-card__action">CS275_A2</a>
+          </section>
+        </div>
+      </div>
+                                 <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Parking Lot Database</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
+                                                             This program allows a user to add a custom parking lot to a database stored on cloudmine. 
+                                                             The application can also display the list of lots added, edit the already existing lots, or find lots within 100 miles of the current location.
+        </section>
+          <section class="mdc-card__actions">
+            <a href="Projects/CS275_lab3.apk" class="mdc-button mdc-button--compact mdc-card__action">CS275_lab3</a>
+          </section>
+        </div>
+      </div>
 
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">trackerBat</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                                This program allows a user to track a baseball players progress. The application allows a player to have multiple games, and multiple at bats. As of January 2017 the application supports saving and full database functionality.
-                                                 If you download my application please leave any comments for the app from the contact page.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="Projects/trackerBat.apk">trackerBat</a>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
+
+                                       <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+                      <section class="mdc-card__media">
+
+            <h1 class="mdc-card__title mdc-card__title--large">trackerBat</h1>
+
+          </section>
+
+          <section class="mdc-card__supporting-text">
+                                                This program allows a user to track a baseball players progress. 
+                                                The application allows a player to have multiple games, and multiple at bats.
+                                                As of January 2017 the application supports saving and full database functionality.
+                                                If you download my application please leave any comments for the app from the contact page.
+        </section>
+          <section class="mdc-card__actions">
+            <a href="Projects/trackerBat.apk" class="mdc-button mdc-button--compact mdc-card__action">trackerBat</a>
+          </section>
+        </div>
+      </div>
+
+    </section>
+                </section>
         <!--End Android Application Description-->
 
-        <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">More Projects</h2>
-        </div>
-        <div class="mdl-grid">
+          <hr class="mdc-list-divider">
 
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">GitHub</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
+                <h2>More Projects</h2>
+                    <div>
+        <div class="mdc-card site-card">
+          <section class="mdc-card__primary">
+            <h1 class="mdc-card__title mdc-card__title--large">Github</h1>
+          </section>
+          <section class="mdc-card__supporting-text">
                                                I have more projects that can be found on my github.
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/ishinbrot/">github</a>
-                                        </div>
-                                </div>
-                        </div>
-                        <div class="mdl-cell">
-                                <div class="mdl-card mdl-shadow--4dp portfolio-card">
-                                        <div class="mdl-card__title">
-                                                <h2 class="mdl-card__title-text">Chesticles</h2>
-                                        </div>
-                                        <div class="mdl-card__supporting-text">
-                                                The project Chestticles is a Chess game that can be played over the network. It was written in Java and uses Peer-to-Peer networking.
-                                                Battleshots is a slightly modified battleship game that can be played over the command line. This must be played over the network. This was written in C.
-                                                It can be found on my github
-                                        </div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="https://github.com/ishinbrot/chestticles">Chesticles on GitHub</a>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
+          </section>
+          <section class="mdc-card__actions">
+            <a href="https://github.com/ishinbrot/" class="mdc-button mdc-button--compact mdc-card__action">github</a>
+          </section>
+        </div>
+      </div>
+
         </main>
+             <script type="text/javascript">
+      (function() {
+        var pollId = 0;
+        pollId = setInterval(function() {
+          var pos = getComputedStyle(document.querySelector('.mdc-toolbar')).position;
+          if (pos === 'fixed' || pos === 'relative') {
+            clearInterval(pollId);
+          }
+        }, 250);
+
+      })();
+    </script>
+
+        <script>
+      var drawerEl = document.querySelector('.mdc-temporary-drawer');
+      var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+      var drawer = new MDCTemporaryDrawer(drawerEl);
+      document.querySelector('.site-menu').addEventListener('click', function() {
+        drawer.open = true;
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+        console.log('Received MDCTemporaryDrawer:open');
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+        console.log('Received MDCTemporaryDrawer:close');
+      });
+      </script>
+
 <div id="footer">
     </div>
              <body onload="loadHeaderAndFooter();">

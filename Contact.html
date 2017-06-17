@@ -5,7 +5,6 @@
  <meta name="Ian Shinbrot" content="A website containing a brief overview of my experience and hobbies.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <link rel="stylesheet" type="text/css" href=".//css/header.css">
-<link rel="stylesheet" type="text/css" href="mdl/material.css">
 <link href="materialDesignIcons/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/cs
 s" />
 <script src="mdl/material.min.js"></script>
@@ -13,77 +12,121 @@ s" />
 ght,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" type="text/css" href=".//css/body.css">
-   <link rel="stylesheet" href="material-modal-master/dist/css/material-modal.min.css">
-   <script src="material-modal-master/src/js/material-modal.js"></script>
-   <script src="dialog-polyfill-master/dialog-polyfill.js"></script>
-   <link rel="stylesheet" href="dialog-polyfill-master/dialog-polyfill.css">
        <script src="jquery-2.2.2.min.js"></script>
      <script src="lib/pageFunctions.js"></script>
+         <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+             <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+    <script>mdc.autoInit()</script>
 </head>
 
-<div id="navigation">
-   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout__title">
-                    <span class="mdl-layout__title" id="headerText"> - Ian Shinbrot</span>
-                </span>
-            </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font mdl-layout--fixed-
-header">
-                  <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link"  href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-                </nav>
-            </div>
+    <style>
+
+    /* Place drawer and content side by side. */
+    .contact-body {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+
+    .contact-main {
+      padding-left: 16px;
+    }
+        
+        .demo-body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    </style>
+  </head>
+  <body class="contact-body mdc-typography">
+    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+     <button class="site-menu material-icons">menu</button>
+          <span class="mdc-toolbar__title catalog-title">About - Ian Shinbrot</span>
+        </section>
+    <aside class="mdc-temporary-drawer">
+      <nav class="mdc-temporary-drawer__drawer">
+        <header class="mdc-temporary-drawer__header">
+          <div class="mdc-temporary-drawer__header-content mdc-theme--primary-bg mdc-theme--text-primary-on-primary">
+            Use the navigation bar below
+          </div>
         </header>
-        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                     <a class="mdl-navigation__link" href="Home.html">Home</a>
-                    <a class="mdl-navigation__link" href="About.html">About</a>
-                    <a class="mdl-navigation__link" href="Projects.html">Projects</a>
-                    <a class="mdl-navigation__link" href="Contact.html">Contact</a>
-            </nav>
-        </div>
+        <nav class="mdc-temporary-drawer__content mdc-list-group">
+          <div id="icon-with-text-demo" class="mdc-list">
+            <a class="mdc-list-item" href="Home.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Home</i>Home
+            </a>
+            <a class="mdc-list-item" href="About.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">About</i>About
+            </a>
+            <a class="mdc-list-item" href="Projects.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Projects</i>Projects
+            </a>
+            <a class="mdc-list-item mdc-temporary-drawer--selected" href="Contact.html">
+              <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">Contact</i>Contact
+            </a>
+          </div>
 
-        <main class="mdl-layout__content">
-            <div class="mdl-grid portfolio-max-width portfolio-contact">
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Contact</h2>
-                    </div>
+          <hr class="mdc-list-divider">
 
-                    <div class="mdl-card__supporting-text">
-                        <p>
-                        Please fill out the information below if you would like to contact me.
-                         </p>
-                        <form action="#" class="">
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="Subject">
-                                <label class="mdl-textfield__label" for="Name">Subject...</label>
-                            </div>
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
-                                <label class="mdl-textfield__label" for="note">Enter note</label>
-                            </div>
-                            <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="ContactSubmission" type="submit" onClick="contact($('#Subject').val(), $('#note').val())">
-                                    Submit
-                                </button>
-                            </p>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        </nav>
+      </nav>
+    </aside>
 
-            <div id="contact-info" class="mdl-js-snackbar mdl-snackbar">
-  <div class="mdl-snackbar__text"></div>
-  <button class="mdl-snackbar__action" type="button"></button>
-</div>
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+        </section>
+      </div>
+    </header>
+
+      <main class="site-main">
+        <div style=margin:70></div>
+        <h1 class="mdc-typography--display1">Contact Information</h1>
+        <p class="mdc-typography--body1 site-main">My email address is ianshinbro@gmail.com 
+            <br>
+             Stay tuned for updates to this page   
+        </p>
+      </main>
+
+    <script type="text/javascript">
+      (function() {
+        var pollId = 0;
+        pollId = setInterval(function() {
+          var pos = getComputedStyle(document.querySelector('.mdc-toolbar')).position;
+          if (pos === 'fixed' || pos === 'relative') {
+            init();
+            clearInterval(pollId);
+          }
+        }, 250);
+        function init() {
+          var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+          toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+        }
+      })();
+    </script>
+
+        <script>
+      var drawerEl = document.querySelector('.mdc-temporary-drawer');
+      var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+      var drawer = new MDCTemporaryDrawer(drawerEl);
+      document.querySelector('.site-menu').addEventListener('click', function() {
+        drawer.open = true;
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+        console.log('Received MDCTemporaryDrawer:open');
+      });
+      drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+        console.log('Received MDCTemporaryDrawer:close');
+      });
+    </script>
+    </div>
+  </body>
 
 <div id="footer">
     </div>

@@ -1,0 +1,115 @@
+      .mdc-toolbar-demo {
+        margin: 0px;
+      }
+      .demo-paragraph {
+        margin: 0px;
+        padding: 20px 28px;
+      }
+      .material-icons {
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0px 8px 0px 0px;
+        color: white;
+      }
+      [dir='rtl'] .material-icons {
+        padding-left: 8px;
+      }
+      @media (max-width: 599px) {
+        .demo-paragraph {
+          padding: 16px;
+        }
+      }
+ 
+        .demo-body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+        .hero .site-card {
+      width: 320px;
+      background-color: white;
+    }
+
+    .hero {
+      min-height: 480px;
+    }
+
+    .site-card {
+      max-width: 21.875rem;
+      /* 350sp */
+      margin-bottom: 48px;
+    }
+
+    @media(min-width: 768px) {
+      .site-card {
+        margin-bottom: 24px;
+      }
+    }
+
+    .site-card--with-avatar .mdc-card__primary {
+      position: relative;
+    }
+
+    .site-card--with-avatar .site-card__avatar {
+      position: absolute;
+      background: #bdbdbd;
+      height: 2.5rem;
+      /* 40sp */
+      width: 2.5rem;
+      /* 40sp */
+      border-radius: 50%;
+    }
+
+    .site-card--with-avatar .mdc-card__title,
+    .site-card--with-avatar .mdc-card__subtitle {
+      margin-left: 56px;
+    }
+
+    [dir="rtl"] .site-card--with-avatar .mdc-card__title,
+    [dir="rtl"] .site-card--with-avatar .mdc-card__subtitle {
+      margin-right: 56px;
+      margin-left: initial;
+    }
+
+    .site-card__16-9-media {
+      background-image: url("images/16-9.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 12.313rem;
+      /* 197sp, for 16:9 ratio with 350sp demo card width */
+    }
+
+    .site-card--small .mdc-card__media {
+      background-image: url("images/1-1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 10.938rem;
+      /* 175sp, for 1:1 ratio with 175sp demo card width */
+    }
+
+    .site-card--bg-demo {
+      height: 21.875rem;
+      /* 350sp */
+      background-image: url("images/1-1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .site-card--bg-demo .mdc-card__primary,
+    .site-card--bg-demo .mdc-card__actions {
+      background: rgba(0, 0, 0, .4);
+    }
+
+    #site-wrapper {
+      margin: 24px;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: left;
+      justify-content: left;
+    }
+
+    #site-wrapper .site-card {
+      margin: 24px;
+      min-width: 320px;
+    }
